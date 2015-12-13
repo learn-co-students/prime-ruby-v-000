@@ -1,14 +1,10 @@
 # Add  code here!
 def prime?(integer)
-  if greater_than_one?(integer) && prime_candidate?(integer)
+  if integer > 1 && prime_candidate?(integer)
     (2...integer).all?{|number| integer % number != 0}
   else
     false
   end
-end
-
-def greater_than_one?(integer)
-  integer > 1
 end
 
 def prime_candidate?(integer)

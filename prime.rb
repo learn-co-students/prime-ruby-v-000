@@ -1,4 +1,4 @@
-def prime(num)
+def prime?(num)
 
 prime = [2,3]
 six1 = 5
@@ -7,7 +7,7 @@ test = []
 
 
 return true if (num == 2 || num == 3)
-
+return false if num == 1
 
 
 if (num % prime[0] == 0 || num % prime[1] == 0)

@@ -1,5 +1,4 @@
 def prime?(number)
-  Benchmark.bm do |bm|
   return false if number == 0 || number == 1
   array = (2..(number-1)).to_a
   array.each do |checknum|

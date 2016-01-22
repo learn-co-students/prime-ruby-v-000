@@ -1,6 +1,5 @@
-require 'prime'
-
 # Add  code here!
 def prime?(number)
-  number.prime?
+  return false if number <= 1
+  return true if Math.sqrt(number).to_i.downto(2).each {|i| return false if number % i == 0}
 end

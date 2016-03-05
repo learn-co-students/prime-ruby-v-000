@@ -1,3 +1,5 @@
+##<script src="https://gist.github.com/loganhasson/8937903.js"></script>##
+
 def sieve(max)
   # Set up an array with all the numbers from 0 to the max
   primes = (0..max).to_a
@@ -29,5 +31,3 @@ end
 def prime?(num)
   sieve(num).include?(num)
 end
-
-##<script src="https://gist.github.com/loganhasson/8937903.js"></script>##

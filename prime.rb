@@ -8,6 +8,14 @@
 # end
 # end
 
+# def prime?(integer)
+# if !(2..integer-1).to_a.select {|i| integer%i == 0}.empty? || integer <= 1
+# 	return false
+# else 
+# 	return true
+# end
+# end
+
 def prime?(integer)
-  (2..integer-1).to_a.select {|i| integer%i == 0}.empty? && integer >= 1
+  integer > 1 and (2..integer-1).to_a.select {|i| integer%i == 0}.empty?
 end

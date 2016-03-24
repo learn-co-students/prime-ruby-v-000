@@ -9,9 +9,5 @@
 # end
 
 def prime?(integer)
-if !(2..integer-1).to_a.select {|i| integer%i == 0}.empty? || integer <= 1
-	return false
-else 
-	return true
-end
+  (2..integer-1).to_a.select {|i| integer%i == 0}.empty? && integer >= 1
 end

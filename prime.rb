@@ -1,4 +1,6 @@
 
+int = [1..200000]
+
 def prime?(int)
   x = 1
   until int == 2 || int == 3 || int == (6 * x - 1)
@@ -7,9 +9,11 @@ def prime?(int)
   if int == 2 || int == 3 || int == (6 * x - 1)
     return true
   else
-    false
+    return false
   end
 end
+
+#######THIS WORKS IN PRY... 
 
 # [14:40:10] (master) prime-ruby-v-000
 # // ♥ learn

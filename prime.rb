@@ -8,7 +8,7 @@ def prime?(number)
   half_num = number / 2
   x = 3
   while x < half_num
-    if number % x == 0 then
+    if number % x == 0
       return false
     end
     x += 2

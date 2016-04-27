@@ -14,5 +14,3 @@ def prime?(num)
 
   return true
 end
-
-puts prime?(85)

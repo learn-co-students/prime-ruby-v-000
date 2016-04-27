@@ -1,11 +1,10 @@
 # Add  code here!
 def prime?(num)
-  i = 2
-  array = []
-  while i < num
-    array << i
-    i+=1
+  if num <= 1
+    return false
   end
+
+  array = (2..num-1).to_a
 
   array.each_with_index.each do |x, index|
     if num % x == 0
@@ -13,8 +12,7 @@ def prime?(num)
     end
   end
 
-  if num <= 1
-    return false
-  else return true
-  end
+  return true
 end
+
+puts prime?(85)

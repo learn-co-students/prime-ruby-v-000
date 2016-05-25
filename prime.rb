@@ -1,11 +1,9 @@
 def prime?(integer)
-  max = integer -1
-  arr = (2..max).to_a
-  arr.any? do |numbers|
-    if integer % numbers == 0
-      return false
-    elsif integer % numbers !=0 
-      return true
-    end
+  if integer == 0|| integer == 1 #1 and 0 are not prime numbers
+    false
+  else
+    max = integer -1
+    arr = (2..max).to_a
+    arr.all? { |numbers| integer % numbers != 0 }
   end
 end

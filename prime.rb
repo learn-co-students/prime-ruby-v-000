@@ -4,7 +4,7 @@ def prime?(integer)
   arr.any? do |numbers|
     if integer % numbers == 0
       return false
-    elsif integer % numbers !=0
+    elsif integer % numbers !=0 && integer % 2 !=0
       return true
     end
   end

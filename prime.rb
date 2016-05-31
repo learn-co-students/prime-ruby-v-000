@@ -1,5 +1,5 @@
 def prime?(num)
-prime = nill
+prime = nil
 if num > 1
   arr_num = (2..num).to_a
   arr_num.each do |number|

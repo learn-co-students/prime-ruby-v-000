@@ -5,15 +5,14 @@ def prime?(number)
   #create an array of numbers up to the given number and check for divisibility
   return false if number < 2
 
-  #second attempt: improved efficiency by checking only numbers up to half the
-  #given number. Really, it should be the sqrt of the given number but I'm
-  #not using the Math functions of Ruby and saving time by not writing my own
-  #sqrt algorithm
+  #second attempt: improved efficiency by checking only numbers up to sqrt
+  #of given number and starting with an array at half the size of given num
   n = number / 2
   array = Array(2..n)
   array.none? do |x|
+    break if x*x > number
     number % x == 0
   end
 end
 
-puts Benchmark.measure {prime?(500)}
+puts Benchmark.measure {prime?(105557)}

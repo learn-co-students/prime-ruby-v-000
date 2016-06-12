@@ -5,13 +5,12 @@ def prime?(number)
   #create an array of numbers up to the given number and check for divisibility
   return false if number < 2
 
-  #second attempt: improved efficiency by checking only numbers up to sqrt of the
-  #given number and starting with an array half the size of given num
+  #second attempt: improved efficiency by checking only numbers up to half of the
+  #given number 
   n = number / 2
   array = Array(2..n)
   array.none? do |x|
     number % x == 0
-    return false if x * x >= number
   end
 end
 

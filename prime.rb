@@ -1,15 +1,17 @@
 require 'pry'
 # First try.
 # def prime?(number)
-#  if number != 2 && number % 2 == 0
+#   if number == 0 || number == 1
+#     false
+#   elsif number != 2 && number % 2 == 0
 #    false
-#  elsif number != 3 && number % 3 == 0
+#   elsif number != 3 && number % 3 == 0
 #    false
-#  elsif number != 5 && number % 5 == 0
+#   elsif number != 5 && number % 5 == 0
 #    false
-#  elsif number != 7 && number % 7 == 0
+#   elsif number != 7 && number % 7 == 0
 #    false
-#  else
+#   else
 #    true
 #  end
 # end

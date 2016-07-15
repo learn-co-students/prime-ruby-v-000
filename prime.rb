@@ -26,7 +26,7 @@ def prime?(num)
     return false
 
   end
-  true
+  true   # no flex
 #binding.pry
 end
 

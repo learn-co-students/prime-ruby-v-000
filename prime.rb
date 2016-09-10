@@ -1,20 +1,14 @@
-def sieve(max)
-
-  primes = (0..max).to_a
-  primes[0] = nil
-  primes[1] = nil
-
-  counter = 0
-  primes.each do |p|
-    next unless p
-    break if p*p > max
-    counter += 1
-    (p*p).step(max,p) { |m| primes[m] = nil }
+def prime?(number)
+  is_prime = true
+  range = *(2..number-1)
+  if number > 2
+    range.each do |num|
+      if number % num == 0
+        is_prime = false
+      end
+    end
+  else
+    is_prime = false
   end
-  puts "Solved for #{max} in #{counter} steps."
-  primes.compact
-end
-
-def prime?(num)
-  sieve(num).include?(num)
+  is_prime
 end

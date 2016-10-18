@@ -5,9 +5,9 @@
 1. Practice iteration and looping.
 2. Practice defining methods and controlling return values.
 
-## Instructions 
+## Instructions
 
-Fork and clone this repository. Run the test suite to learn what is required of you. 
+Fork and clone this repository. Run the test suite to learn what is required of you.
 
 You'll be defining a method, `prime?()`, that takes in an integer argument and returns a boolean of whether or not that integer is a prime number.
 

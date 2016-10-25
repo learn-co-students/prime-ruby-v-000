@@ -10,5 +10,4 @@ end
 
 
 
-  #must use .to_a to iterate over range of numbers by making it an array
-  #must iterate
+  

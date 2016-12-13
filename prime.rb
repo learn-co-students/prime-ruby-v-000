@@ -7,10 +7,10 @@ def prime?(x)
   # Get the square root of x.
   sq = find_square_root(x)
 
-  # Make an array from 2 to the square root of x.
+  # Make an array of all possible divisors from 2 to the square root of x.
   divisors = (2..sq).to_a
 
-  # Check if any of the divisors are evenly divisible ,
+  # Check if any of possible divisors divide into x with no remainder.
   divisors.none? { |div| (x.to_f / div) % 1 == 0 }
 end
 

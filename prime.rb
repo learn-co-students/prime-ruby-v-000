@@ -9,10 +9,12 @@ end
 def find_square_root(x, ary = (1..x).to_a)
   if (x / ary[ary.length / 2]) == ary[ary.length / 2]
     ary[ary.length / 2]
+
   elsif (x / ary[ary.length / 2]) < ary[ary.length / 2]
     ary.pop(ary.length / 2)
     return ary.last if ary.length <= 2
     find_square_root(x, ary)
+
   else
     ary.shift(ary.length / 2)
     return ary.last if ary.length <= 2

@@ -1,11 +1,12 @@
 # Add  code here!
 
 def prime?(num)
-  divs = [2,3,5,7]
-  if num <= 1
+  if num < 2
     return false
+  else
+    divs = (2..(Math.sqrt(num).floor)).to_a
+    !divs.any?{|i| num % i == 0}
   end
-  !divs.any?{|i| num != i && num % i == 0}
 end
 
 puts prime?(-1)

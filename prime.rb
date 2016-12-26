@@ -1,10 +1,11 @@
 def prime?(number)
-  negative_number = number *-1
-  not_prime_array= [0,1,-1]
-  #.last returns the last element of self
-  # append << pushes given object on array end
-  not_prime_array<< negative_number
-	#not_prime_array.each do |item|
-  #.each returs element as output
-  not_prime_array.include? (number)
+  if number <= 1
+    return false
+  end
+  for i in 2..(number-1)
+    if number % i == 0
+      return false # why? if prime remainder is 0; 5/5 = 1 remainder is 0
+    end
+  end
+  return true
 end

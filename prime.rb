@@ -1,33 +1,31 @@
-#require 'pry'
-def sieve(max)
-  # Set up an array with all the numbers from 0 to the max
-  primes = (0..max).to_a
-
-  # Set both the first and second positions (i.e., 0 and 1) to nil, as they
-  # aren't prime.
-  primes[0] = primes[1] = nil
-
-  # Iterate through primes array
+def sieve_of_eratosthenes(max)
+  arr=(0..max).to_a
+  arr[0] = arr[1] = arr[2] = nil
   counter = 0
-  primes.each do |p|
-    # Skip if nil
-    next unless p
-    # Break if we are past the square root of the max value
-    break if p*p > max
+  arr.each do |i|
+    next unless i
+    break if i*i > max
     counter += 1
-    # Start at the square of the current number, and step through.
-    # Go up to the max value, by multiples of the current number, and replace
-    # that value with nil in the primes array
-    (p*p).step(max,p) { |m| primes[m] = nil }
-  end
-
-  # Finally, return the compacted array.
-  puts "Solved for #{max} in #{counter} steps."
-  primes.compact
+    (i*i).step(max,i) { |m| arr[m] = nil }
+     #http://ruby-doc.org/core-1.9.3/Array.html delete_if deletes every
+     #elements of self for which block evaluates to true.  
+   end
+   puts "solved for #{max} in #{counter} steps"
+   arr
 end
 
-def prime?(num)
-  sieve(num).include?(num)
+# Example Call
+puts sieve_of_eratosthenes(20)
+
+def prime?(number)
+	if sieve_of_eratosthenes(number).include?(number)
+		true
+	else
+		false
+	end
 end
 
-##https://gist.github.com/loganhasson/8937903
+#failed to work for 4, wonder why?
+
+
+

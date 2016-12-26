@@ -3,20 +3,21 @@ def prime?(number)
   negative_number = number *-1
 	not_prime_array= [0,1,-1]
   not_prime_array.last << negative_number
-  binding.pry
 	#not_prime_array.each do |item|
-		if number == "#{not_prime_array[item]}"
+  not_prime_array.each do|item| 
+    if number== "#{not_prime_array[item]}" 
       binding.pry
-      false
+      false 
     elsif number/number == 1 || number/1 == number
       true
     else
       false
 		end
-	#end
+  end
 end
 
 #https://gist.github.com/loganhasson/8937903
+#https://rosettacode.org/wiki/Sieve_of_Eratosthenes#Ruby
 
 
 

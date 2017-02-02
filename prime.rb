@@ -13,9 +13,7 @@ def prime?(number)
 
   divisible = 2
   while divisible < number
-    if number % divisible == 0
-      return false
-    end
+    return false if number % divisible == 0
     divisible += 1
   end
   true

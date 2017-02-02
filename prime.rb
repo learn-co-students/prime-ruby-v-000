@@ -1,5 +1,5 @@
 def prime?(num)
-  range = (2..1000).to_a
+  range = (2..max).to_a
   answer = []
   if num != 1 && num > 0
     range.delete_if{|x| x == num}

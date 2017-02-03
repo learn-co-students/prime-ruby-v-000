@@ -19,7 +19,7 @@ def prime?(number)
   end
    true
 end
-#
+
 # def prime?(number)
 #   #return false if  number <= 1
 #   number_span = (2..(number - 1)).to_a

@@ -3,7 +3,9 @@ def prime?(number)
     false
   else
     denominators = (2..number).to_a
-    divisible = denominators.select { |denominator| (number % denominator == 0) }
+    divisible = denominators.select do |denominator|
+      number % denominator == 0
+    end
     divisible.count == 1
   end
 end

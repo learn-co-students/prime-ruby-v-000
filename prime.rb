@@ -18,7 +18,7 @@ def prime?(i)
   array = []
   if i > 1
     array << "true"
-    [*2..50].each do |factor|
+    [*2..i].each do |factor|
       if factor == i
         array << "true"
       elsif i % factor > 0

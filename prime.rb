@@ -15,9 +15,9 @@ end
 
 # second solution using trial division
 def prime?(integer)
-  if integer == 2
+  if integer == 2 || integer == 3
     true
-  elsif integer >= 3
+  elsif integer >= 4
     num_array = (2..(integer ** 0.5).to_i).to_a
     num_array.none?{|number| integer % number == 0}
   else

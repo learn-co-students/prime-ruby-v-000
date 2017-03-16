@@ -2,7 +2,8 @@ require 'benchmark'
 
 def prime?(int)
   if int > 2
-  check_array = Range.new(2, int, exclusive = true).to_a
+  half = int/2
+  check_array = Range.new(2, half + 1, exclusive = true).to_a
   !(check_array.any? {|n| int % n == 0})
   elsif int == 2
     true
@@ -10,35 +11,46 @@ def prime?(int)
   end
 end
 
+def sieve(max)
+  # Set up an array with all the numbers from 0 to the max
+  primes = (0..max).to_a
 
-def prime_v2?(int)
-  if int > 2
-  check_array = Range.new(2, int, exclusive = true).to_a
-  check_array.delete_if {|n| (n % 2 == 0) || (n % 3 == 0) || (n % 5 == 0)}
-  !(check_array.any? {|n| int % n == 0})
-  elsif int == 2
-    true
-  else false
+  # Set both the first and second positions (i.e., 0 and 1) to nil, as they
+  # aren't prime.
+  primes[0] = primes[1] = nil
+
+  # Iterate through primes array
+  ###counter = 0
+  primes.each do |p|
+    # Skip if nil
+    next unless p
+
+    # Break if we are past the square root of the max value
+    break if p*p > max
+    ###counter += 1
+    # Start at the square of the current number, and step through.
+    # Go up to the max value, by multiples of the current number, and replace
+    # that value with nil in the primes array
+    (p*p).step(max,p) { |m| primes[m] = nil }
   end
+
+  # Finally, return the compacted array.
+  ###puts "Solved for #{max} in #{counter} steps."
+  primes.compact
 end
 
-def prime_v3?(int)
-  if int > 2
-  check_array = Range.new(2, int, exclusive = true).to_a
-  !(check_array.any? {|n| int % n == 0})
-  elsif int == 2
-    true
-  else false
-  end
+def prime_from_learn?(num)
+ sieve(num).include?(num)
 end
+
 
 
 Benchmark.bm(20) do |bm|
-bm.report('full array') do
-prime?(154594)
+bm.report('my') do
+prime?(77777)
 end
 
-bm.report('smaller array') do
-prime_v2?(154594)
+bm.report('learn') do
+prime_from_learn?(77777)
 end
 end

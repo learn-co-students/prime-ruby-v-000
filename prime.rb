@@ -1,3 +1,5 @@
+# Algorithm based on pseudocode on wikipedia
+# https://en.wikipedia.org/wiki/Primality_test
 def prime?(n)
     if n <= 1
         return false

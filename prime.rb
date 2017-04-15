@@ -1,3 +1,22 @@
+require 'benchmark'
+
+num = 21456835
+
+Benchmark.bmbm(11) do |bm|
+
+bm.report('using none?') do
+
+def prime?(num)
+	if num <= 1
+		return false
+	end
+	(2...num).none?{|divisor| num % divisor == 0}
+end
+
+end
+
+bm.report('using each') do
+
 def prime?(num)
 	if num <= 1
 		return false
@@ -10,4 +29,8 @@ def prime?(num)
 		end
 	true
 	end
+end
+
+end
+
 end

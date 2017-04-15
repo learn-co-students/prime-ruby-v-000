@@ -1,7 +1,9 @@
 def prime?(integar)
-  if integar % integar && integar % 1 == 0
+  if if integar <= 1
+    false
+  elsif integar % integar && integar % 1 == 0
     true
-  elsif integar % integar == 0
+  else integar % integar == 0
     false
     end
   end

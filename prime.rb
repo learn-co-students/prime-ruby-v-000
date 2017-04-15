@@ -1,9 +1,12 @@
 def prime?(integar)
-  if if integar <= 1
-    false
-  elsif integar % integar && integar % 1 == 0
-    true
-  else integar % integar == 0
-    false
+  if integar <= 1
+    return false
+  end
+
+  for num in 2..(integar - 1)
+    if integar % num == 0
+      return false
     end
   end
+  true
+end

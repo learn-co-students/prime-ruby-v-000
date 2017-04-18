@@ -4,7 +4,7 @@ def prime?(n)
   prime_number = ('1'..'n').to_a
   while i < prime_number.length
     prime_number.each do |num|
-      if num % 1 == 0 && num % n == 0 && num > 0
+      if num % 1 == 0 && num % num == 0 && num > 0
         return true
       else
         return false

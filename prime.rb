@@ -1,29 +1,13 @@
+require 'pry'
 
 def prime?(number)
-x = (-100..100).to_a
-  x.any? do |num|
-    if number > 1 && number % num == 0 && number % 1 == 0
-      true
-    elsif number % num != 0 ||
-      false
+  if integer <= 1
+    return false
+  end
+  for num in 2..(number - 1)
+    if number % num == 0
+      return false
     end
   end
+      true
 end
-
-
-
-
-
-
-
-
-
-
-
-#def prime?(number)
-#  if number != 0 && number % 1 != 0 && number % number != 0
-#     false
-#  elsif number
-#    true
-#  end
-#end

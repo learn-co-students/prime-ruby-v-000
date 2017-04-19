@@ -5,7 +5,7 @@ def prime?(integer)
     end
 
     i = 2
-    limit = sqrt(integer)
+    limit = integer / i  
     while i < limit
         if integer % i == 0
             return false

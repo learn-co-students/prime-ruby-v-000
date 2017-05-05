@@ -1,3 +1,22 @@
+# Add  code here!
+#the number 10 has 4 factors, which are 1, 2, 5, 10.. This can be solved by factors much easier
+def prime?(integer)
+
+        factors = 0
+        n=1
+        while n <= integer
+            if integer %n==0
+              factors+=1
+            end
+            n+=1
+        end
+        factors <= 2 && integer >1 ? true : false
+      #prime numbers only have 2 factors and cannot be 1 or below
+
+end
+
+old code below
+.......................................................................................................
 def sieve(max)
   # Set up an array with all the numbers from 0 to the max
   primes = (0..max).to_a

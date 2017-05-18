@@ -1,4 +1,5 @@
-# Add  code here!
+# Code pulled from https://en.wikipedia.org/wiki/Primality_test
+# I do not claim to understand it at all
 def prime?(number)
   return false if number <= 1
   return true if number <= 3

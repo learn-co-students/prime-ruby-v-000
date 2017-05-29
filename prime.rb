@@ -1,6 +1,5 @@
 require "pry"
 
-# Add  code here!
 def prime?(n)
   if n <= 1
        return false
@@ -19,4 +18,17 @@ def prime?(n)
    return true
   end
 end
-prime?(2)
+
+# def prime?(n)
+#   if n <= 1
+#        return false
+#    elsif n <= 3
+#        return true
+#    elsif n % 2 == 0 || n % 3 == 0
+#        return false
+#   else
+#     range = (3..Math.sqrt(n)-1).to_a
+#     range.detect { |i| n % i == 0 }
+#   end
+#   true
+# end

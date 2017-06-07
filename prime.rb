@@ -3,7 +3,6 @@ def prime?(n)
   if n < 2
     return false
   end
-  # no need to use divisors that are more than half of n
   # the divisor won't divide evenly if it's more than half of n
   half_n = n / 2
   range = (2..half_n).to_a

@@ -19,6 +19,3 @@ def prime?(integer)
     integer % divisor == 0
   end
 end
-
-binding.pry
-prime?(2)

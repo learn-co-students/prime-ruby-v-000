@@ -9,7 +9,7 @@ describe "prime?" do
   end
 
   it 'returns false for non-prime numbers' do
-    expect(prime?(-1)).to be(false), "Be sure to account for negative numbers!"
+    expect(prime?(-10)).to be(false), "Be sure to account for negative numbers!"
     expect(prime?(0)).to be(false)
     expect(prime?(1)).to be(false)
     expect(prime?(4)).to be(false)

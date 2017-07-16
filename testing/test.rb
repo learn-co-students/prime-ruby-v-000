@@ -32,3 +32,13 @@ def check_prime_list(prime)
 end
 
 check_prime_list(479)
+def prime_finder(prime)
+  prime_counter = 3
+  unless prime_counter > prime
+    if prime % prime_counter == 0
+      false
+     end
+    prime_counter += 2
+  end
+  #prime_counter >= prime
+end

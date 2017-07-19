@@ -1,7 +1,8 @@
-def prime(int)
-  if int % 2 == 0
-    true
+def prime?(num)
+  if num <= 1
+    return false
   else
-    false
+    Math.sqrt(num).floor.downto(2).each {|i| return false if num % i == 0}
+    true
   end
 end

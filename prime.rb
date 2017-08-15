@@ -12,7 +12,7 @@ def prime?(int)
       end #ends j loop
     end #ends i loop
   end #ends else loop
-  numbers.include?(int)
+  numbers.last == int
 end #ends method
 
 =begin

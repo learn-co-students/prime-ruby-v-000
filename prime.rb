@@ -1,18 +1,12 @@
 def prime?(int)
 
-    if int < 2
-      false
-    elsif int == 2
-      true
-    else
-    i = 2
-    while i < int
-      if int % i == 0
-        return false
-      else
-        i += 1
-      end
-    end
-    true
+  if int == 2
+    return true
+  end
+
+  if int > 2
+  !(2...int).any? { |num| int % num == 0  }
+  else
+    false
   end
 end

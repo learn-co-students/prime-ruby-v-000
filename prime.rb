@@ -7,6 +7,6 @@ def prime?(int)
   if int > 2
   !(2...int).any? { |num| int % num == 0  }
   else
-    false
+    return false
   end
 end

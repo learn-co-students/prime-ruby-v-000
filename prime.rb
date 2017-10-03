@@ -1,3 +1,6 @@
+require 'benchmark'
+require 'bigdecimal/math'
+
 def prime?(number)
   i = 2
   n = number.abs #change negative values to positive
@@ -13,6 +16,8 @@ def prime?(number)
 
   return true
 end
+
+puts  Benchmark.measure { BigMath.PI(10_000) }
 
 # Source
 # http://www.stoimen.com/blog/2012/05/08/computer-algorithms-determine-if-a-number-is-prime/

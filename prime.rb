@@ -1,7 +1,6 @@
 # Add  code here!
 def prime?(number)
   factors = []
-
   (2..number).to_a.each do |n|
     factors << n if number % n == 0 && number != n
   end

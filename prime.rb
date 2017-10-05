@@ -1,12 +1,25 @@
-require 'prime'
+def prime?(num)
+  new_array = *(2..num/2)
 
-def prime?(n)
-  if Prime.prime?(n) == true
-    true
-  else
-    false
+  counter = 0
+
+  while counter = 1
+
+  new_array.each {|num|}
+
+  counter +=1
+
+  if (num % 2 == 0) || (num <= 1 == true)
+      return false
+    elsif num < 0
+      return false
+    else
+      return true
+    end
   end
 end
+
+# && (Math.sqrt(num) == true)
 
 
 # require 'pry'
@@ -61,5 +74,15 @@ end
 #   else
 #       false
 #     end
+#   end
+# end
+
+# require 'prime'
+#
+# def prime?(n)
+#   if Prime.prime?(n) == true
+#     true
+#   else
+#     false
 #   end
 # end

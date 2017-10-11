@@ -1,3 +1,5 @@
+require'benchmark'
+
 def sieve(max)
   primes = (0..max).to_a
   primes[0] = primes[1] = nil
@@ -18,3 +20,5 @@ def prime?(num)
 end
 
 puts prime?(99)
+
+puts Benchmark.measure{prime?(3337)}

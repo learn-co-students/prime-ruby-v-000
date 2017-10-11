@@ -1,4 +1,4 @@
-# Natural number greater than 1, no positive divisors other than 1 and itself. Modulo (% operator) is the remainder after division.
+# Natural number greaters than 1, no positive divisors other than 1 and itself. Modulo (% operator) is the remainder after division.
 def prime?(integer)
 
   if integer <= 2 || integer.negative?

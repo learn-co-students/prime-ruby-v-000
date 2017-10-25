@@ -55,7 +55,7 @@ def primeOpt2?(num)
   return true if numbers.select{|e| num % e == 0}.size == 0 else false
 end
 
-def prime?(num)
+def littleFermat?(num)
   if num == 1 || num == -1 || num == 0
     return false
   end
@@ -65,11 +65,11 @@ def prime?(num)
   return true if ((2 ** num) - 2) % num == 0 else false
 end
 #puts prime?(10)
-p = 15485868
+p = 15485867
 #puts Benchmark.measure { prime_fast?(p) }
 #puts Benchmark.measure { prime?(p) }
 #puts Benchmark.measure { primeOpt?(p) }
-#puts Benchmark.measure { primeOpt2?(p) }
-#puts Benchmark.measure { littleFermat?(p) }
-#puts primeOpt2?(p)
-#puts littleFermat?(p)
+puts Benchmark.measure { primeOpt2?(p) }
+puts Benchmark.measure { littleFermat?(p) }
+puts primeOpt2?(p)
+puts littleFermat?(p)

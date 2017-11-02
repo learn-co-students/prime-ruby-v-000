@@ -1,5 +1,5 @@
 # V1.0 I know I missed the point of the assignment, just getting it to work.  Generating an input range seems pointless for this and would add overhead.
-def prime?(input) #integer prime test excluding even numbers, up to the sqrt, with no math calls.  Takes 2 secs @ quadrillion on an i7.
+def prime?(input) #integer prime test excluding even numbers, up to the sqrt, with no math calls.  Takes 2 secs @ (15 9s) quadrillion on an i7.
 test_array = []
   if input == 2
     true

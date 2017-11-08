@@ -25,7 +25,7 @@ def prime?(n)
      false
    elsif n == 2 || n == 3
      true
-   elsif (2...n-1).any?{|i| n % i == 0}
+   elsif (2...n).any?{|i| n % i == 0}
      false
    else
      true

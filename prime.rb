@@ -4,15 +4,17 @@
 def prime?(integer)
 
   primeFlag = true
-  max = integer - 1
 
-  if [2,3].include?(integer) then
-      return primeFlag
+  if [2,3].include?(integer)
+      return true
   elsif integer <= 0 || integer == 1
       return false
   else
-      (2..max).each do |denom|
-        primeFlag = false if integer % denom == 0
+      (2..(integer-1)).each do |denom|
+        if integer % denom == 0 then
+            primeFlag = false
+            break
+        end
       end
       return primeFlag
   end

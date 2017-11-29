@@ -20,6 +20,7 @@ def unsquare(prime, new=prime, prev=prime/2)
     new/2 == 0? n=1: n=new/2
     new = (n + (prime/n))/2
     if new == prev
+        puts new
         return new
     else unsquare(prime, prev, new)
     end

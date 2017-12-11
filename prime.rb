@@ -1,11 +1,15 @@
 # Add  code here!
 def prime?(int)
-  i=2
-  while i<int
-    if(int/i)
-      return false
+  if int>1
+    i=2
+    while i<int
+      if(int%i==0)
+        return false
+      end
+      i=i+1
     end
-    i=i+1
+    return true
+  else
+    return false
   end
-  return true
 end

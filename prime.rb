@@ -1,5 +1,5 @@
 require 'prime'
-require 'pry'
+
 def prime?(integer)
   if integer < 2 || integer < 0
     return false
@@ -9,7 +9,6 @@ def prime?(integer)
      range.each do |number|
     if integer % number == 0
       even_div << number
-      binding.pry
     end
   end
   if even_div.count == 2

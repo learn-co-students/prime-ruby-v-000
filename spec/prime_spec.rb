@@ -6,6 +6,7 @@ describe "prime?" do
     expect(prime?(3)).to be(true)
     expect(prime?(11)).to be(true)
     expect(prime?(105557)).to be(true)
+    expect(prime?(135557993)).to be(true)
   end
 
   it 'returns false for non-prime numbers' do

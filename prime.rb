@@ -1,13 +1,14 @@
-require 'pry'
 
 def prime?(num)
-    divisors = [2..num].to_a
-    puts divisors
-    binding.pry
+  if num < 0
+    puts "please enter a non-negative integer"
+  else
+    divisors = [2..num-1].to_a
     divisors.none? do |divisor|
-      boo % divisor == 0
+      num % divisor == 0
     end
   end
+end
 
 
   # Add  code here!

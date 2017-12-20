@@ -11,6 +11,6 @@ def prime?(integer)
   last = integer - 1
   divisors = [2..last].to_a
     divisors.none? do |divisor|
-      integer%divisor == 0
+      integer % divisor == 0
     end
   end

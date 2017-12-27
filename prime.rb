@@ -1,13 +1,20 @@
-require 'benchmark'
-require 'bigdecimal/math'
+# def prime?(num)
+#   return false if num <= 1
+#   for i in 2...num do
+#     if num % i == 0
+#       false
+#     else
+#       true
+#     end
+#   end
+# end
 
 def prime?(num)
   return false if num <= 1
-  Math.sqrt(num).to_i.downto(2).each {|i| return false if num % i == 0}
-  true
+  ary = (2...num).to_a
+  if ary.none? { |i| num % i == 0 }
+    true
+  else
+    false
+  end
 end
-#
-# def prime?(num) #failing
-#    Math.sqrt(num).floor.downto(2).each {|i| return false if num % i == 0 || num < 0 }
-#    return false if num % i == 0 || num < 0
-# end

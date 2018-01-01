@@ -1,8 +1,3 @@
-def prime?(i)
- if i > 1
-   a = (2..i).to_a
-    a.include? {|n| i % n != 0 }
-  else
-    return false
-  end
-end 
+def prime?(num)
+  (2..num).each { |i| return false if num % i == 0} 
+end

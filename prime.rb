@@ -1,6 +1,5 @@
 def prime?(n)
-  if n < 2 then false
-  else (2..n - 1).none?{ |i| n % i == 0 } end
+  n < 2 ? false : (2..n - 1).none?{ |i| n % i == 0 }
 end
 
 =begin solution breakdown
@@ -58,12 +57,12 @@ if target < 2 then false
 else (2..target - 1).none?{ |i| target % i == 0 } end
 __________________________________________________________
 
-Test
+Refactor
 __________________________________________________________
 
-target = n
-if target < 2 then false
-else (2..target - 1).none?{ |i| target % i == 0 } end
+*Using ternary operator*
+
+n < 2 ? false : (2..n - 1).none?{ |i| n % i == 0 }
 __________________________________________________________
 
 =end

@@ -1,8 +1,9 @@
-require 'pry'
-
 def prime?(num)
   return false if num < 2
-  return true if num == 2 || num == 3
 
-  (2..(num/2)).none? {|i| (num % i) == 0}
+  (2..num).none? do |i|
+    break true if i**2 > num
+
+    (num % i) == 0
+  end
 end

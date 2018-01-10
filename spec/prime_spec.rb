@@ -18,3 +18,21 @@ describe "prime?" do
     expect(prime?(101013)).to be(false)
   end
 end
+
+describe "prime_faster?" do
+  it 'returns true for prime numbers' do
+    expect(prime_faster?(3)).to be(true)
+    expect(prime_faster?(11)).to be(true)
+    expect(prime_faster?(105557)).to be(true)
+  end
+
+  it 'returns false for non-prime numbers' do
+    expect(prime_faster?(-1)).to be(false), "Be sure to account for negative numbers!"
+    expect(prime_faster?(0)).to be(false)
+    expect(prime_faster?(1)).to be(false)
+    expect(prime_faster?(4)).to be(false)
+    expect(prime_faster?(40)).to be(false)
+    expect(prime_faster?(1763)).to be(false)
+    expect(prime_faster?(101013)).to be(false)
+  end
+end

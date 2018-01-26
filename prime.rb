@@ -1,11 +1,9 @@
 def prime?(integer)
   if integer <= 1
    return false
+  else
+    (2...integer).to_a.all? do |num|
+      integer % num != 0
+    end
   end
-  (2...integer).each do |num|
-     if integer % num == 0
-      return false
-     end
-   end
-   true
  end

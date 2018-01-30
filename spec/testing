@@ -1,0 +1,17 @@
+
+
+  if split_num[1]%4==0 && split_num[2]%4==0 #4
+    false
+  elsif sum += digit % 3 == 0 #3
+    false
+  elsif sum += digit % 9 == 0 #9
+    false
+  end #if statement
+  #each
+end
+
+prime?(40)
+
+  # split_num = []
+  # split_num << num.split()
+  # split_num.each {|digit| sum+=digit}

@@ -11,7 +11,7 @@ def prime?(int)
   end
 end
 
-def array_prime?(int)
+def array_prime?(int)                   # array version
   if int > 1 && int.odd?
     range = *(2..Math.sqrt(int).ceil)
     range.any? do |number|

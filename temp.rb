@@ -25,6 +25,7 @@ end
 prime?(1)
 
 
+#   using the tests as a list of requirements to meet:
 
 # require_relative './spec_helper'
 # require_relative '../prime.rb'

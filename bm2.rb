@@ -18,6 +18,6 @@ Benchmark.bm do |bm|
     end
   end
 
-         user     system      total        real
-Test 1:   0.000000   0.000000   0.000000 (  0.000155)
-Test 2:   0.000000   0.000000   0.000000 (  0.000208)
+#          user     system      total        real
+# Test 1:   0.000000   0.000000   0.000000 (  0.000155)
+# Test 2:   0.000000   0.000000   0.000000 (  0.000208)

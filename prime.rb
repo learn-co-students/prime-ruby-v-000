@@ -3,7 +3,7 @@ def prime?(i)
     return false
   elsif i.between?(2, 3)
     return true
-  elsif i > 3 
+  elsif i > 4 
   array = Array(2...i/2)
     array.all? do |d|
        i % d != 0 

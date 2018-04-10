@@ -1,17 +1,9 @@
-def prime?(integer) 
-  i = 4
-  if integer <= 1 
+def prime?(integer)
+  if integer <= 1
     return false
-  elsif integer == 2 || integer == 3
-    return true
-  elsif integer % 2 == 0
-    return false
-  end
-  while i < integer/2
-    if integer % i == 0
-      return false
+  else
+    (2..integer/2).to_a.all? do |factor|
+      integer % factor != 0
     end
-    i += 1
   end
-  true
 end

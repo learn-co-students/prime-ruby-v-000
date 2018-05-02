@@ -1,4 +1,5 @@
 # Add  code here!
+require "benchmark"
 def prime?(num)
   if num <= 1
     return false
@@ -12,7 +13,10 @@ def prime?(num)
   end
   true
 end
-  #(2...100).to_a
-  #(2..num/2).none?{|i| num % i == 0}
 
-  
+
+<<<<<<< HEAD
+
+=======
+
+>>>>>>> 92881303cff1652f8555301ee95f8e156930c2ca

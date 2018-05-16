@@ -1,8 +1,10 @@
 def prime?(integer)
-  if integer < 2 || integer % 2 === 0
+  if integer % 2 === 0 && integer != 2
     return false
   elsif integer.between?(2, 5)
     return true
+  elsif integer < 2
+    return false
   end
 
   check = 3

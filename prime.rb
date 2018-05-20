@@ -7,9 +7,9 @@ def prime?(num)
   odd_range = (5..num_square).select {|int| int.odd?}
 
   odd_range.each do |x|
-   if num % x == 0
-     return false
-   end
+    if num % x == 0
+      return false
+    end
   end
   return true
 end

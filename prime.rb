@@ -1,7 +1,9 @@
-def prime?(n)
-   if n <= 1
-     false 
-    else
-     false 
+def prime?(num)
+     if num <= 1
+    return false
+  else
+    (2..num-1).to_a.all? do |pass|
+      num % pass != 0
    end
  end
+end

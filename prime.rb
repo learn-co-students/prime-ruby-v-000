@@ -1,12 +1,9 @@
-def prime?(integer)
-  return false if (integer.even? && integer > 2) || integer <= 1
-
-  half_int = integer / 2
-  i = 3
-  while i < half_int
-    return false if integer % i == 0
-    i += 2
+def prime?(num)
+  if num < 0 or num == 0 or num == 1
+    return false
+  else
+    (2..num-1).to_a.all? do |factor|
+      num % factor != 0
+    end
   end
-
-  true
 end

@@ -10,15 +10,26 @@ def prime?(n)
   if n % 2 === 0 or n % 3 === 0
     return false
   end
-  i = 5
-  while i * i <= n do
-    if n % i === 0 or n % (i + 2) === 0
-      return false
-    else
-      i = i + 6
-    end 
-  end 
-  return true
+  
+  #######################
+
+  (5..n-1).to_a.all? { |possible_factor|
+      n % possible_factor != 0}
+  
+  #######################
+
+  # better solution above replaces below code
+  # i = 5
+  # while i * i <= n do
+  #   if n % i === 0 or n % (i + 2) === 0
+  #     return false
+  #   else
+  #     i = i + 6
+  #   end 
+  # end 
+  # return true
+  ######################
+  
 end
 
 # tests

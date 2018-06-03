@@ -9,11 +9,11 @@
 # else display Num is not prime
 ##
 def prime?(number)
-  isPrime = true;
-  if(number <= 1)
+  isPrime = true; # set a trigger variable
+  if(number <= 1) # check if number is <= 1 because every number 1 and under is never prime
     return false;
   end
-  prime_factor = (2..(number - 1)).to_a
-  isPrime = prime_factor.none? { |factor| number % factor == 0}
-  return isPrime;
+  prime_factor = (2..(number - 1)).to_a # set a range from 2 to the number we are testing - 1
+  isPrime = prime_factor.none? { |factor| number % factor == 0} # set is prime to whether the number in question is divisible by any number between 2 and the number itself
+  return isPrime; # if its not prime this would have triggered to false, return it either way
 end

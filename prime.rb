@@ -1,5 +1,15 @@
 def prime?(int)
-  if int == 0 || int == 1 || int == 2
-    return true
-  end
+return true if int == 2..3
+
+return false if int <= 1
+
+return false if int.even?
+
+range = (3..(int/2).round).to_a
+i = 0
+while i < range.length
+return false if int % range[i] == 0
+i += 1
+end
+  return true
 end

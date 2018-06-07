@@ -6,15 +6,15 @@ def prime?(number)
 
   if number <= 1
     return false
-  elsif  
-      range = (2..number)
+  elsif number == 2
+    return true
+  else
+      range = (2..number-1).to_a
       range.each do |n|
-        number % n == 0
         if number % n == 0
           return false
         end
       end
-  else   
-    return true
   end
+    return true
 end

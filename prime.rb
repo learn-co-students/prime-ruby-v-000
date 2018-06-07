@@ -7,7 +7,7 @@ require 'pry'
 #  elsif n == 2
 #    return true
 #  elsif n > 2
-#    for i in 2..n do 
+#    for i in 2..(n - 1) do 
 #      if (n % i) == 0
 #        return false
 #      end
@@ -34,5 +34,4 @@ def prime?(n)
   end
   true
   #binding.pry
-
 end

@@ -1,7 +1,7 @@
 # Add  code here!
 def prime?(number)
   return false if number <= 1
-  return true if number > 1 && number <= 3
+  return true if number == 2 || number <= 3
   #first take the square root of the number
   #next check if number is divisible by prime numbers less than the square root
   sqrt_number = (number ** 0.5).ceil

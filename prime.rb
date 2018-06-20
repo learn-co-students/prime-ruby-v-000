@@ -1,13 +1,7 @@
 require'pry'
 
 def prime?(integer)
-  if integer <= 1
-    return false 
-  end 
-  for n in 2..(integer-1)
-    if integer % n == 0 
-    return false 
-    end
-  end
-  true 
+  all_numbers_greater_than_one = (2..(integer-1)).to_a
+  (all_numbers_greater_than_one.any? {|x| integer % x == 0} || integer <= 1) ? false : true
 end
+    # 2..(integer-1) creates an endless string of integers

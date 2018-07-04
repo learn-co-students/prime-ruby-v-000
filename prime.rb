@@ -1,20 +1,5 @@
 require 'pry'
-=begin
-Add  code here!
-function is_prime(n)
-     if n ≤ 1
-        return false
-     else if n ≤ 3
-        return true
-     else if n mod 2 = 0 or n mod 3 = 0
-        return false
-     let i ← 5
-     while i * i ≤ n
-        if n mod i = 0 or n mod (i + 2) = 0
-            return false
-        i ← i + 6
-     return true
-=end
+
 
 def prime?(n)
   if n <= 1
@@ -23,5 +8,7 @@ def prime?(n)
      return true
   else
   (2..n/2).none? {|i| n % i == 0}
+  #none of elements must return true for any iterations for the none method to return true
+  #if something perfectly divides by modulo with 0 remainder then it is not a prime number  (eg. 8) it will return true so the none? will return false
   end
 end

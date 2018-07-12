@@ -1,9 +1,9 @@
-# Add  code here!
-prime?(num)
-  if num == "2"
-    return TRUE
-  else
-    num.odd? &&  number % 3 == 0 ? false : true
+
+
+def prime?(n)
+  if n < 0  || n == 0 || n == 1
+    return false
+  else (2..n-1).to_a.all? { |x|  n % x != 0} 
 end
 end
 

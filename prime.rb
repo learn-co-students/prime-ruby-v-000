@@ -1,4 +1,9 @@
-def prime?(number)
-  arr = (2..number).select {|m| number % m == 0}
-  arr.length == 1
+def prime?(num)
+  if num < 0 || num == 0 || num == 1
+     false
+  else
+    (2..num-1).to_a.all? do |possible_factor|
+      num % possible_factor != 0
+    end
+  end
 end

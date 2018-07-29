@@ -1,12 +1,20 @@
-#def prime?(number)
-#  prime = true
-#    for r in 2..Math.sqrt(number).to_i
-#      if (number % r == 0)
-#        prime = false
-#      end
-#    end
-#    return prime
-#end
+require 'benchmark'
+require 'bigdecimal/math'
+
+def prime1?(number)
+  if number <= 1
+    return false
+  end
+  prime = true
+  i = 2
+    while i <= number
+      if (number % i == 0)
+        prime = false
+      end
+      i += 1
+    end
+    return prime
+end
 
 def prime?(number)
   if number <= 1
@@ -22,3 +30,6 @@ def prime?(number)
     end
     return prime
 end
+
+#puts Benchmark.measure {prime1?(100000000)}
+#puts Benchmark.measure {prime?(100000000)}

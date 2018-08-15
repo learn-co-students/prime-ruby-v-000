@@ -19,3 +19,10 @@ end
 
 puts prime?(105557)
 
+# def prime(n)
+#   prime = []
+#   (0...n).each do |i|
+#     prime << i if n % i == 0
+#     end
+#   prime.empty? ? "#{n} is prime" : prime
+#   end

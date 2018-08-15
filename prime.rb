@@ -56,13 +56,9 @@ def is_prime(n)
   # Also, this is 4 times faster than #prime_v2?, which is itself 247 times faster than #prime?
   if n < 2 
     return false
-  elsif n == 2
+  elsif n == 2 or n == 3
     return true
-  elsif n == 3
-    return true
-  elsif n % 2 == 0
-    return false
-  elsif n % 3 == 0
+  elsif n % 2 == 0 or n % 3 == 0
     return false
   else
     square_root = (n ** 0.5).to_i

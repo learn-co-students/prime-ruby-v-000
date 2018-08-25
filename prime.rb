@@ -10,5 +10,5 @@ def prime?(number)
   end
 end 
 
-benchmark.measure {n*1000000}
+puts Benchmark.measure {prime?(19999)}
   

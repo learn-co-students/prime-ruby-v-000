@@ -1,9 +1,9 @@
 def prime?(integer)
-  i = 0 
-  number = []
-  number do  
+  if integer < 0 || integer == 0 || integer == 1 
+    return false
+ 
 end
-number << yield(number[i])
+
 
 
 

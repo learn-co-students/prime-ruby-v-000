@@ -1,5 +1,5 @@
 # Add  code here!
-require 'benchmark'
+# my solution - slow but accurate
 def prime?(integer)
   result = ""
   case
@@ -14,3 +14,13 @@ def prime?(integer)
     end
     result
 end
+# testing Flatiron solution - 100% faster than mine
+# def prime?(integer)
+#   if integer <= 1
+#     false
+#   else
+#     (2..integer-1).to_a.all? do |chk|
+#       integer % chk != 0
+#     end
+#   end
+# end

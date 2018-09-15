@@ -3,9 +3,9 @@ require'benchmark'
 require'bigdecimal/math'
 
 def prime?(int)
-  if int == 2
+  if int == 2 || int == 5
     return true
-  elsif int <= 1 || int.even?
+  elsif int <= 1 || int.even? || int % 5 == 0
     return false
   end
   i = 3
@@ -16,12 +16,12 @@ def prime?(int)
   true
 end
 
-iterations = 100
+# iterations = 1000
 
-Benchmark.bm do |bm|
-  bm.report do
-    iterations.times do
-      puts Benchmark.measure{prime?(rand(0...10000000))}
-    end
-  end
-end
+# Benchmark.bm do |bm|
+#   bm.report do
+#     iterations.times do
+#       puts Benchmark.measure{prime?(rand(0...10000000))}
+#     end
+#   end
+# end

@@ -1,5 +1,10 @@
 def prime?(num)
-  [2,3,5,7].each {|divider| false if num % divider == 0}
-  true 
+  if num < 2 
+    false 
+  elsif num == 2 
+    true 
+  else 
+    (2..(num - 1)).to_a.none? {|divider| num % divider == 0}
+  end 
 end 
   

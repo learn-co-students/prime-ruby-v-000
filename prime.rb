@@ -1,13 +1,9 @@
 def prime?(int)
- if int <=1
-   false
- elsif int <=3
-   true
- elsif int % 2 == 0 || int % 3 == 0
-   false
- elsif (2..Math.sqrt(int).to_i).any?{ |i| int % i == 0}
-   false
+  if int <=  1
+    false
   else
-    true
-end
+    (2...int).to_a.all? do |possible_factor|
+      int % possible_factor != 0
+    end
+  end
 end

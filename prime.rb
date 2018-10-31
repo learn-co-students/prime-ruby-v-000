@@ -5,7 +5,6 @@ def prime?(int)
     return false
   end
   i = 2
-  check = 0
   while i < int
     if int % i == 0
       return false

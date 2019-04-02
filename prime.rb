@@ -1,8 +1,8 @@
 # Add  code here!
 def prime?(number)
-  if number >= 2
-    (2...number).to_a.all? {|nums| number % nums != 0}
+  if number <= 1
+    return false
   else
-    false
+    (2..number-1).to_a.all? {|nums| number % nums != 0}
   end
 end

@@ -19,3 +19,15 @@ def prime?(num)
 		end
 	end
 end
+
+
+# Add  code here!
+# A prime number is a whole number greater than 1 whose only factors are 1 and itself.
+#def prime?(num)
+#    if num <= 1
+#        false
+#    else 
+#    (2..(num-1)).to_a.detect {|i| num % i == 0} == nil ? true : false
+#    end
+#end
+

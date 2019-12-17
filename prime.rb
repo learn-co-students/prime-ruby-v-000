@@ -1,3 +1,4 @@
+=begin
 def prime?(integer)
   if integer <= 1
     false
@@ -10,20 +11,15 @@ def prime?(integer)
     end
   end
 end
-
-=begin  if integer <= 1
-    return false
-  end
-  if integer == 2
-    return true
-  end
-
-  counter = 2
-while counter < integer
-  if integer % counter == 0
-    return false
-  end
-  counter += 1
-end
-end
 =end
+def prime?(integer)
+  if integer <= 1
+    return false
+  end
+  counter = 2
+  while counter < integer
+    return false if integer % counter == 0
+    counter += 1
+  end
+  true
+end

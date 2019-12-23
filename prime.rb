@@ -1,8 +1,14 @@
 def prime?(n)
   return false if n < 2
   return true if n == 3 || n == 2
-  !(2...Math.sqrt(n)+1).any?{ |i| n % i == 0 }
+  (2...Math.sqrt(n)+1).none? { |i| n % i == 0 }
 end
+
+# def prime?(n)
+#   return false if n < 2
+#   return true if n == 3 || n == 2
+#   !(2...Math.sqrt(n)+1).any? { |i| n % i == 0 }
+# end
 
 
 # def prime?(n)

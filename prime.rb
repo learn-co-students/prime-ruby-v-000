@@ -1,12 +1,9 @@
-def prime?(integer)
-  if integer < 2
+def prime?(num)
+  if num <= 1
     return false
-  end
-  upper_limit = integer / 2
-  (2..upper_limit).each do |i|
-    if integer % i == 0
-      return false
+  else
+    (2..num-1).to_a.all? do |n|
+      num % n != 0
     end
   end
-  true
 end

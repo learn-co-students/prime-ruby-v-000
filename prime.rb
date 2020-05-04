@@ -1,15 +1,9 @@
 # Add  code here!
 def prime?(int)
-  if int < -1
-    numbers = (int...-2).to_a
-    numbers.none? do |num|
-      int%num == 0
-    end
-  elsif int > 1
-    numbers = (2...int).to_a
-    numbers.none? do |num|
-      int%num == 0
-    end
+  if int == 2
+    true
+  elsif int > 1 && int != 2 && !(2...(int-1)).to_a.any?{|num| int % num == 0}
+    true
   else
     false
   end

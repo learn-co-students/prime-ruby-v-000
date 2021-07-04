@@ -1,0 +1,9 @@
+#!/usr/bin/env ruby
+require_relative '../lib/prime.rb'
+
+# Code your CLI Here
+
+
+
+puts "Welcome to PRIME_NUMBERS"
+prime?(3)

@@ -11,6 +11,6 @@ def prime? (n)
       end
     end
   end
-  true
+  return true
 end
 

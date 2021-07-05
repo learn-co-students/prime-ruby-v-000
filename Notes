@@ -1,0 +1,60 @@
+function is_prime(n)
+    if n ≤ 1
+        return false
+    else if n ≤ 3
+        return true
+    else if n mod 2 = 0 or n mod 3 = 0
+        return false
+    let i ← 5
+    while i * i ≤ n
+        if n mod i = 0 or n mod (i + 2) = 0
+            return false
+        i ← i + 6
+    return true
+
+---
+
+((n+1)**(n+1)) = (n** + 2*n + 1)
+---
+2n + 1 (repeatedly divide by this)
+
+to find the square root of a number you
+
+
+---
+
+def prime(n)
+  (2..n/2).none? do |i|
+    n % i == 0
+  end
+end
+
+
+
+---
+
+first major try:
+
+
+def prime?(n)
+  root = (n**n)**1/n
+  range_array = (2..root).to_a
+  if n <= 1
+    return false
+  elsif
+    range_array.each do |num|
+      if n%num == 0
+        return true
+      else
+        return false
+      end
+    end
+  end
+end
+
+    #integers = [-1, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+
+    elsif
+
+    integers.include? do |num|
+      if num is evenly / by any element in range array (n%range = 0)
